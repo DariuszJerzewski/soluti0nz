@@ -6,7 +6,7 @@ class DBConnect {
     private static ResultSet ExecuteQuery(String query) throws ClassNotFoundException, SQLException {
             Class driver = Class.forName("com.mysql.jdbc.Driver");
         Connection c = null;
-            c = DriverManager.getConnection("jdbc:mysql://localhost/world",
+            c = DriverManager.getConnection("jdbc:mysql://192.168.1.104/employees",
                             "root", "password");
 
         Statement st = null;
@@ -16,6 +16,8 @@ class DBConnect {
 
             rs = st.executeQuery(
                     query);
+
+            c.close();
 
         return rs;
     }

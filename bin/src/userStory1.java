@@ -1,7 +1,7 @@
 ﻿import java.util.Scanner;
 
 
-public class userStory1Constructor {
+public class userStory1 {
 
     protected String surname;
     protected String streetName;
@@ -15,7 +15,7 @@ public class userStory1Constructor {
 
 
     String forename;
-    public userStory1Constructor(String forename, String surname, String streetName, String houseNumber, String postCode,
+    public userStory1(String forename, String surname, String streetName, String houseNumber, String postCode,
                                  String nIN, String bankName, int sortCode, int startingSalary, int employeeNumber) {
         super();
         this.forename = forename;
