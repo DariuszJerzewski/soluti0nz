@@ -1,13 +1,15 @@
 import java.sql.*;
 
 class DBConnect {
-
+    private userName;
+    private pass;
+    private hostName;
 
     private static ResultSet ExecuteQuery(String query) throws ClassNotFoundException, SQLException {
             Class driver = Class.forName("com.mysql.jdbc.Driver");
         Connection c = null;
             c = DriverManager.getConnection("jdbc:mysql://localhost/world",
-                            "root", "password");
+                            userName, pass);
 
         Statement st = null;
             st = c.createStatement();
